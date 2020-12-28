@@ -1,0 +1,15 @@
+<!-- Local Store Abstract  -->
+<bean id="webframework.localstore"
+      class="org.alfresco.web.scripts.LocalFileSystemStore"
+      abstract="true" init-method="init">
+  <property name="root">
+    <value>/surf-sample/sample/deploy</value>
+  </property>
+</bean>
+<!-- Web Scripts: Local Store -->
+<bean id="webframework.localstore.webscripts"
+      parent="webframework.localstore">
+  <property name="path">
+    <value>alfresco/site-webscripts</value>
+  </property>
+</bean>

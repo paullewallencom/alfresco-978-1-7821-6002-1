@@ -1,0 +1,18 @@
+Section 01 Video 01
+
+./alfrescoenterprise-4.1.4-installer-linux-x64.bin
+
+sudo chmod +x  alfresco-enterprise-4.1.4-installer-linux-x64.bin
+
+Section 01 Video 4
+
+host all all 127.0.0.1/32 password
+
+
+Section 01 Video 5
+
+evt[.sh|.cmd] [-?|--help] [-v] [-V|-vv]
+            -t databaseType -h databaseHost [-r databasePort]
+            [-d databaseName] -l databaseLogin [-p databasePassword]
+
+export JAVA_OPTS= '-Xms512m -Xmx2048m -Xss1024k -XX:MaxPermSize=256m -XX:NewSize=256m -server'

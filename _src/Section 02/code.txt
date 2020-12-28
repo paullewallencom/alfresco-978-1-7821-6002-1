@@ -1,0 +1,57 @@
+Section 02 Video 01
+
+<config>
+     <client>
+		<login-page>/jsp/extension/login.jsp</login-page>
+     </client>
+</config>
+
+Section 02 Video 02
+
+<user-group-admin>false</user-group-admin>
+
+<zero-byte-file-upload>false</zero-byte-file-upload>
+
+<default-home-space-path>/app:company_home/app:user_homes</default-home-space-path>
+
+<search-max-results>500</search-max-results>
+
+<search-minimum>3</search-minimum>
+
+
+<config evaluator="string-compare" condition="cm:folder icons">
+	<icons>
+		<icon name="space-icon-custom" path="/images/icons/custom-image-folder.gif" />
+	</icons>
+</config>
+
+<content-types>
+	<type name="cm:content" />
+	<type name="custom:myDoc" />
+</content-types>
+
+<from-email-address>my@email.org</from-email-address>
+
+Section 02 Video 03
+
+java -jar alfresco-mmt.jar install <AMPFileLocation> <WARFileLocation>
+
+Section 02 Video 04
+
+   <!-- Custom Execute Script Action -->
+   <config evaluator="string-compare" condition="DocLibActions">
+      <actionGroups>
+         <actionGroup id="folder-browse">
+            <action index="980" id="org_sharextras_execute-script" />
+         </actionGroup>
+         <actionGroup id="folder-details">
+            <action index="980" id="org_sharextras_execute-script" />
+         </actionGroup>
+         <actionGroup id="document-browse">
+            <action index="980" id="org_sharextras_execute-script" />
+         </actionGroup>
+         <actionGroup id="document-details">
+            <action index="980" id="org_sharextras_execute-script" />
+         </actionGroup>
+      </actionGroups>
+   </config>

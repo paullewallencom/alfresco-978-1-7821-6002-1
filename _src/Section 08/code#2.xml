@@ -1,0 +1,11 @@
+<bean id="doclibCustomVtiServer" class="org.alfresco.repo.jscript.app.VtiServerCustomResponse">
+   <property name="port">
+      <value>${vti.server.external.port}</value>
+   </property>
+   <property name="host">
+      <value>${vti.server.external.host}</value>
+   </property>
+   <property name="sysAdminParams">
+      <ref bean="sysAdminParams" />
+   </property>
+</bean>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project default="deploy-jar">
+
+	<!-- Set these as required -->
+	<property name="jar.name" value="extension_modules.jar"/>	
+	<property name="jar.deploy.dir" value="/home/user/alfresco/tomcat/webapps/share/WEB-INF/lib"/>	
+
+	<property name="project.dir" value="."/>
+	<property name="build.dir" value="${project.dir}/build"/>
+	<property name="jar.file" value="${build.dir}/lib/${jar.name}"/>
+
+	<target name="mkdirs">
+		<mkdir dir="${build.dir}/lib" />
+	</target>
+	
+	<target name="package-jar" depends="mkdirs">
+		<jar destfile="${jar.file}" >
+			<fileset dir="${project.dir}/config" includes="**/*" />
+		</jar>
+	</target>
+	
+	<target name="deploy-jar" depends="package-jar">
+		<copy file="${jar.file}" todir="${jar.deploy.dir}"/> 
+	</target>
+	
+	<target name="clean">
+		<delete file="${jar.file}"/>
+		<delete file="${jar.deploy.dir}/${jar.name}"/>
+	</target>
+
+</project>

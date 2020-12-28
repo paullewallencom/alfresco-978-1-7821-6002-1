@@ -1,0 +1,29 @@
+<fields>
+    <field>
+        <id>filename</id>
+        <name>Filename</name>
+        <dshort>Filename</dshort>
+        <position>1</position>
+        <type>String</type>
+        <cmis>cmis:name</cmis>
+        <alias>z</alias>
+    </field>
+    <field>
+        <id>author</id>
+        <name>Author</name>
+        <dshort>Author</dshort>
+        <position>2</position>
+        <type>String</type>
+        <cmis>cm:author</cmis>
+        <alias>db</alias>
+    </field>
+    <field>
+        <id>date</id>
+        <name>Date</name>
+        <dshort>Date</dshort>
+        <position>3</position>
+        <type>Date</type>
+        <cmis>cm:created</cmis>
+        <alias>db</alias>
+    </field>
+</fields>

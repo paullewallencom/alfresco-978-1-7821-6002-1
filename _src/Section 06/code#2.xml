@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <component>
+    <scope>page</scope>
+    <region-id>main</region-id>
+    <source-id>index</source-id>
+    <component-type-id>/component/common/include</component-type-id>
+    <properties>
+      <container>div</container>
+    </properties>
+    <resources>
+      <resource id="source" type="webapp">/content/news/example.html</resource>
+    </resources>
+  </component>

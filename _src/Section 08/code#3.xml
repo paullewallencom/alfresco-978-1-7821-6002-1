@@ -1,0 +1,4 @@
+<bean id="evaluator.doclib.metadata.hasExposure"      
+      parent="evaluator.doclib.action.propertyNotNull">  
+   <property name="property" value="exif:exposureTime"/>
+</bean>

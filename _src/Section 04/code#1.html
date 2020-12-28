@@ -1,0 +1,76 @@
+<html>
+	<head>
+
+	<title>Documents Dashboard</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<!--[if lt IE 8]> 
+	<link href="/easydms/css/ie_7_6.css" rel="stylesheet" type="text/css"> <![endif]-->
+	<!--popup-->
+	<link href="/easydms/css/workflow.css" type="text/css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' type='text/css' rel='stylesheet' >
+	<script src="/easydms/pretty/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+</style>
+
+	</head>
+
+	<body style="font-family: Roboto, sans-serif, Verdana, Helvetica Bold, Helvetica, Arial;">
+		<div id="container" style="width:100%">
+		
+		    <div id="example" class="k-content">
+
+		        <h1 style="font-size: 19px;background: #888;padding: 5px;color: #FFF;border: 1px solid #808080;margin-left: -1px;"> Documents: </h1>
+		        <div class="demo-section">
+					<#if nodes?size &gt; 0>
+			            <table id="archivedDOCUMENTS" class="metrotable">
+			                <thead>
+			                    <tr>
+			                        <th>ID</th>
+			                        <th>Name</th>
+			                        <th>Owner</th>
+			                        <th>Custom Property</th>
+			                        <th>Created</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+							<#list nodes as node>
+							<tr class="table-item">
+								<td>
+									${node_index + 1}.
+								</td>
+								<td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+									${node.name}
+								</td>
+								<td>
+									${node.properties.creator}
+								</td>
+								<td>
+									${node.properties["customUri:customProperty"]}
+								</td>
+								<td>
+									${node.properties["cm:created"]?date?string("dd/MM/yyyy")}
+								</td>
+							</tr>	
+
+							</#list>
+							</tbody>
+			            </table>
+					<#else> 	
+						<table border="0" style="border-collapse:collapse;" cellspacing="0">
+							<tr class="table-title">
+								<td colspan="3">
+									--
+								</td>
+							</tr>
+						</table>
+					</#if>
+		        </div>
+			</div>
+
+		</div>
+		
+
+	</body>
+</html>
+
